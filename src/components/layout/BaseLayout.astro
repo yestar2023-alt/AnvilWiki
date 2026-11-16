@@ -11,6 +11,7 @@
  * Pages should wrap themselves in LocaleLayout (which wraps this), not call this directly.
  */
 import '~/styles/globals.css';
+import '~/styles/command-center.css';
 import { site, siteUrl } from '~/config/site';
 import { defaultLocale, locales, OG_LOCALE_MAP, type Locale } from '~/i18n/routing';
 import { organizationJsonLd } from '~/lib/seo';
@@ -154,7 +155,7 @@ const privacyLabel = consent?.privacyLabel ?? footerStrings.privacyPolicy ?? 'Pr
 ---
 
 <!doctype html>
-<html lang={mainLocale} class="scroll-smooth">
+<html lang={mainLocale} class="scroll-smooth dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -318,11 +319,8 @@ const privacyLabel = consent?.privacyLabel ?? footerStrings.privacyPolicy ?? 'Pr
         } catch (e) {
           /* storage unavailable */
         }
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (stored === 'dark' || stored === 'black' || (!stored && prefersDark)) {
-          document.documentElement.classList.add('dark');
-          if (stored === 'black') document.documentElement.classList.add('black');
-        }
+        document.documentElement.classList.toggle('dark', stored !== 'light');
+        document.documentElement.classList.toggle('black', stored === 'black');
       })();
     </script>
 

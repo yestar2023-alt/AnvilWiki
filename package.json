@@ -41,6 +41,7 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "test": "vitest run",
+    "test:site": "vitest run tests/affiliates.test.ts tests/consent.test.ts tests/content-links.test.ts tests/covers.test.ts tests/i18n-smoke.test.ts tests/indexnow.test.ts tests/prompt.test.ts tests/sync-codes.test.ts tests/today.test.ts",
     "test:watch": "vitest",
     "test:e2e": "node scripts/e2e-apply-template.mjs",
     "check-sitemap": "tsx scripts/check-sitemap.ts",

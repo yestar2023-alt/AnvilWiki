@@ -70,37 +70,31 @@ export interface SiteConfig {
 }
 
 export const site: SiteConfig = {
-  name: 'Anvil Quest Wiki',
-  shortName: 'AQ Wiki',
-  description:
-    'Complete Anvil Quest wiki with boss guides, tier lists, codes, item locations, and beginner tips. Every guide carries a last-verified date.',
-  domain: 'anvil.wiki',
-  tagline: 'Your forge for everything Anvil Quest',
-  legalNotice:
-    'Anvil Quest Wiki is a fan-made community site. Not affiliated with or endorsed by the game developer.',
-  // 👉 APPLY TEMPLATE: set a real address if you run no social channels —
-  // the contact page renders it as a mailto link.
+  name: 'Zombies Aren\'t Real Wiki',
+  shortName: 'ZAR Wiki',
+  description: 'Zombies Aren\'t Real wiki: field guides, military units, air support, civilian protection, and custom maps for the Steam strategy game.',
+  domain: 'zombies-arentrealwiki.wiki',
+  tagline: 'Read the city. Hold the line. Save the living.',
+  legalNotice: 'An independent fan-made wiki. Not affiliated with or endorsed by Jogamedev. Game images belong to their respective owners.',
+  // Set a real address if you run no social channels — the contact page
+  // renders it as a mailto link.
   contactEmail: '',
   social: {
-    official: 'https://example.com/anvil-quest',
-    discord: 'https://discord.gg/example',
-    youtube: 'https://youtube.com/@example',
-    twitter: 'https://twitter.com/example',
-    reddit: 'https://reddit.com/r/anvilquest',
+    official: 'https://store.steampowered.com/app/5185890/Zombies_Arent_Real/',
   },
-  // 👉 APPLY TEMPLATE: point these at the game's real canonical pages.
   sameAs: [
-    'https://example.com/anvil-quest',
-    'https://en.wikipedia.org/wiki/Anvil_Quest',
+    'https://store.steampowered.com/app/5185890/Zombies_Arent_Real/',
+    'https://www.jogamedev.com/zar-presskit.html',
   ],
   game: {
-    name: 'Anvil Quest',
-    platform: 'Roblox',
-    developer: 'Forge Studios',
-    genre: 'Fantasy RPG',
-    releaseDate: '2026-01-15',
+    name: 'Zombies Aren\'t Real',
+    platform: 'PC / Steam',
+    developer: 'Jogamedev',
+    genre: 'Horde-defense strategy',
+    releaseDate: '2026-11-13',
   },
-  // hero.webp is 1200×630 (the recommended OG share aspect ratio).
+  // og:image dims of the SHIPPED hero.webp — if you replace public/images/hero.webp,
+  // update these in src/config/site.ts to match (wrong dims mis-crop share cards).
   ogImageWidth: 1200,
   ogImageHeight: 630,
 };

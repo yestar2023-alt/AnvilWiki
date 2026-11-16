@@ -47,14 +47,11 @@ jobs:
       - name: Quality gates
         uses: ./.github/actions/gates
         with:
-          site-url: ${{ vars.SITE_URL || 'https://anvil.wiki' }}
+          site-url: ${{ vars.SITE_URL || 'https://zombies-arentrealwiki.wiki' }}
 
-  # apply-template has ZERO vitest coverage and only breaks in real
-  # (non-dry-run) mode, which the demo repo never exercises — three real-mode
-  # bugs shipped through the eight gates unnoticed before this job existed
-  # (PR #10 ENOENT crash; home-template schema drift crashing the fork's
-  # first build). Drives the CLI against a throwaway copy and builds it.
+  # Template initialization E2E requires the upstream demo content.
   e2e-template:
+    if: github.repository == 'PNGTRID/AnvilWiki'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:

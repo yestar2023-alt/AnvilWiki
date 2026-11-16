@@ -1,11 +1,11 @@
 {
-  "name": "Anvil Quest Wiki",
-  "short_name": "AQ Wiki",
-  "description": "Complete Anvil Quest wiki with boss guides, codes, and tier lists.",
+  "name": "Zombies Aren't Real Wiki",
+  "short_name": "ZAR Wiki",
+  "description": "Zombies Aren't Real wiki: field guides, military units, air support, civilian protection, and custom maps for the Steam strategy game.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#f36716",
+  "background_color": "#101811",
+  "theme_color": "#b6cf72",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",

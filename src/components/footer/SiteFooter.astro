@@ -30,16 +30,17 @@ const socials = ([
 const legalLinks: Array<keyof typeof footer> = ['about', 'faq', 'privacyPolicy', 'termsOfService', 'copyright', 'contact'];
 ---
 
-<footer class="mt-16 border-t border-border bg-muted/30">
+<footer class="command-footer mt-16 border-t border-border bg-muted/30">
   <div class="mx-auto max-w-7xl px-4 py-10">
     <div class="grid gap-8 md:grid-cols-3">
       {/* Brand */}
       <div>
         <div class="flex items-center gap-2 font-bold">
-          <Icon name="lucide:hammer" class="h-6 w-6 text-nav" />
+          <img src="/logo.svg" alt="" width="36" height="36" />
           <span>{site.name}</span>
         </div>
         <p class="mt-2 text-sm text-muted-foreground">{site.tagline}</p>
+        <p class="micro footer-motto">{ui.command.footerLabel}</p>
         <p class="mt-3 text-xs">
           <a href={recentPath(locale)} class="text-foreground/70 transition hover:text-nav">
             {shared.recentTitle}

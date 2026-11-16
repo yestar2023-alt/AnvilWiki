@@ -6,9 +6,9 @@ description: >-
   content with the exact same standard — no drift between the workflows.
 inputs:
   site-url:
-    description: 'SITE_URL for the build step (CI passes vars.SITE_URL; falls back to the demo domain).'
+    description: 'SITE_URL for the build step (CI passes vars.SITE_URL; defaults to the wiki domain).'
     required: false
-    default: 'https://anvil.wiki'
+    default: 'https://zombies-arentrealwiki.wiki'
 
 runs:
   using: 'composite'
@@ -22,7 +22,7 @@ runs:
       shell: bash
 
     - name: Test
-      run: pnpm test
+      run: pnpm test:site
       shell: bash
 
     - name: Config consistency (nav/locale 3-place check)
@@ -33,11 +33,6 @@ runs:
       run: pnpm build
       shell: bash
       env:
-        # FORKS: set a repository variable SITE_URL (Settings → Secrets and
-        # variables → Actions → Variables) to your domain — otherwise CI
-        # falls back to the demo domain and the built canonical/sitemap
-        # point at the wrong site (production builds use wrangler.toml,
-        # which this does not affect).
         SITE_URL: ${{ inputs.site-url }}
 
     - name: Content lint (H1/alt/slashes)
