@@ -336,9 +336,16 @@ export default defineConfig({
       // load-bearing: a fork's `/` is its REAL homepage and must stay listed
       // (landingLinkEnabled=false there). /demo/ is produced by src/pages/
       // demo.astro and gets collected automatically.
-      filter: (url) =>
-        !noindexPaths.has(normalizePath(decodeSitemapPath(url))) &&
-        !(landingLinkEnabled && normalizePath(decodeSitemapPath(url)) === '/'),
+      filter: (url) => {
+        const pagePath = normalizePath(decodeSitemapPath(url));
+        // Tag directories are navigation aids, not search landing pages.
+        const isTagPath = pagePath === '/tags' || pagePath.startsWith('/tags/');
+        return (
+          !isTagPath &&
+          !noindexPaths.has(pagePath) &&
+          !(landingLinkEnabled && pagePath === '/')
+        );
+      },
       // Inject <lastmod> from article frontmatter (see buildLastmodMap) and
       // hreflang alternates that mirror the page-level truth (see alternatesFor).
       serialize(item) {
