@@ -72,5 +72,5 @@ Covers `src/assets/covers/zar-1.webp` through `zar-6.webp` are 1200x675 and were
 - No hands-on play was performed. Unit balance, optimal build orders, exact ranges, damage, costs, cooldowns, upgrade order, and city-specific routes are not verified.
 - Co-op synchronization, time-control behavior, matchmaking, and network quality were not tested beyond the official one-friend online co-op description.
 - Workshop map compatibility, editor capabilities, and performance on the minimum hardware were not tested.
-- No exact UI paths, keybindings, unlock sequence, or campaign order are claimed.
+- Later corridor and safe-zone articles include interface steps and keybindings reported by cited third-party guides and visible in store screenshots. These have not been tested firsthand and may differ by game version; see `research-mechanics.md`.
 - Recommendations in the articles are planning suggestions, not measured guarantees of success.

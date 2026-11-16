@@ -14,6 +14,7 @@ import { CONTENT_TYPES, LEGAL_CONTENT_TYPES } from '~/config/navigation';
 import { isLocale, defaultLocale, locales, type Locale } from '~/i18n/routing';
 import { getEntryWithFallback, localesForEntry, localesForCategory, parseEntryId, type ResolvedEntry } from '~/lib/content';
 import { detailPath, languageAlternates, listPath } from '~/lib/url';
+import { articlePath } from '~/config/article-paths';
 
 export async function getStaticPaths() {
   const { getCollection } = await import('astro:content');
@@ -24,6 +25,7 @@ export async function getStaticPaths() {
 
   const paths: Array<{
     params: { locale: string; slug: string };
+    props?: { category: string; articleSlug: string };
   }> = [];
 
   // Only non-default locales here.
@@ -41,7 +43,7 @@ export async function getStaticPaths() {
     for (const entry of published) {
       const parsed = parseEntryId(entry.id);
       if (!parsed || parsed.locale !== locale) continue;
-      paths.push({ params: { locale, slug: `${parsed.category}/${parsed.slug}` } });
+      paths.push({ params: { locale, slug: articlePath(parsed.category, parsed.slug) }, props: { category: parsed.category, articleSlug: parsed.slug } });
     }
 
     // Also generate paths for English articles so fallback works at request
@@ -49,11 +51,11 @@ export async function getStaticPaths() {
     for (const entry of published) {
       const parsed = parseEntryId(entry.id);
       if (!parsed || parsed.locale !== defaultLocale) continue;
-      const slugStr = `${parsed.category}/${parsed.slug}`;
+      const slugStr = articlePath(parsed.category, parsed.slug);
       // Avoid duplicate params (if same slug exists in both locales).
       const exists = paths.some((p) => p.params.locale === locale && p.params.slug === slugStr);
       if (!exists) {
-        paths.push({ params: { locale, slug: slugStr } });
+        paths.push({ params: { locale, slug: slugStr }, props: { category: parsed.category, articleSlug: parsed.slug } });
       }
     }
   }
@@ -62,8 +64,8 @@ export async function getStaticPaths() {
 }
 
 interface Props {
-  locale: string;
-  slug: string;
+  category?: string;
+  articleSlug?: string;
 }
 
 const localeParam = Astro.params.locale;
@@ -79,9 +81,13 @@ let view: 'list' | 'article' | 'not-found' = 'not-found';
 let category = '';
 let resolved: ResolvedEntry | null = null;
 
-const articleSlug = parts.slice(1).join('/');
+const articleSlug = Astro.props.articleSlug ?? parts.slice(1).join('/');
 
-if (parts.length === 1) {
+if (Astro.props.category && Astro.props.articleSlug) {
+  category = Astro.props.category;
+  resolved = await getEntryWithFallback(category, articleSlug, locale);
+  view = resolved ? 'article' : 'not-found';
+} else if (parts.length === 1) {
   category = parts[0];
   view = CONTENT_TYPES.includes(category) ? 'list' : 'not-found';
 } else {

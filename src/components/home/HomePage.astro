@@ -52,7 +52,7 @@ const command = ui.command;
         <span class="hero-corner corner-one" aria-hidden="true"></span><span class="hero-corner corner-two" aria-hidden="true"></span>
         <div class="hero-copy">
           <p class="micro hero-eyebrow"><span></span>{command.heroLabel}</p>
-          <h1 id="briefing-title"><span>{command.heroTitle}</span><strong>{command.heroAccent}</strong></h1>
+          <h1 id="briefing-title"><span class="sr-only">{command.heroGame}</span><span>{command.heroTitle}</span><strong>{command.heroAccent}</strong></h1>
           <p class="hero-description">{command.heroDescription}</p>
           <div class="hero-actions">
             <a class="command-button" href={localizePath(command.primaryHref, locale)}>{command.primary}<Icon name="lucide:arrow-up-right" /></a>
@@ -95,7 +95,7 @@ const command = ui.command;
         <aside class="intel-column">
           <section class="commander-note">
             <p class="micro"><Icon name="lucide:notebook-pen" />{command.fieldNoteLabel}</p><h2>{command.fieldNoteTitle}</h2><p class="note-copy">{command.fieldNoteText}</p>
-            <a href={localizePath('/guides/civilian-protection/', locale)}>{command.fieldNoteLink}<Icon name="lucide:arrow-up-right" /></a>
+            <a href={localizePath('/safe-zones/', locale)}>{command.fieldNoteLink}<Icon name="lucide:arrow-up-right" /></a>
           </section>
           <section class="danger-note"><p class="micro"><Icon name="lucide:triangle-alert" />{command.dangerLabel}</p><p>{command.dangerText}</p></section>
           <section class="game-intel">

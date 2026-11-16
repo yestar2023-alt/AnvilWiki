@@ -9,6 +9,7 @@ import { NAVIGATION_CONFIG } from '~/config/navigation';
 import { getEntriesByCategory, parseEntryId } from '~/i18n/content';
 import type { Locale } from '~/i18n/routing';
 import type { WikiEntry } from '~/i18n/content';
+import { articlePath } from '~/config/article-paths';
 
 export interface NavGroup {
   key: string;
@@ -45,7 +46,7 @@ export async function getDynamicNavigation(
         return {
           title: e.data.title,
           slug,
-          path: `${item.path}/${slug}`,
+          path: `/${articlePath(item.key, slug)}`,
         };
       }),
     });

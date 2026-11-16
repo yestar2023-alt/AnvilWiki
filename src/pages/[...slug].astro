@@ -14,13 +14,14 @@ import { CONTENT_TYPES, LEGAL_CONTENT_TYPES } from '~/config/navigation';
 import { defaultLocale, type Locale } from '~/i18n/routing';
 import { getEntryWithFallback, localesForEntry, localesForCategory, parseEntryId, type ResolvedEntry } from '~/lib/content';
 import { detailPath, languageAlternates, listPath } from '~/lib/url';
+import { articlePath } from '~/config/article-paths';
 
 export async function getStaticPaths() {
   const { getCollection } = await import('astro:content');
   const all = await getCollection('wiki');
   const isDev = import.meta.env.DEV;
 
-  const paths: Array<{ params: { slug: string } }> = [];
+  const paths: Array<{ params: { slug: string }; props?: { category: string; articleSlug: string } }> = [];
 
   // List page paths: one per category (English default locale).
   for (const ct of CONTENT_TYPES) {
@@ -32,14 +33,15 @@ export async function getStaticPaths() {
     if (entry.data.draft && !isDev) continue;
     const parsed = parseEntryId(entry.id);
     if (!parsed || parsed.locale !== defaultLocale) continue;
-    paths.push({ params: { slug: `${parsed.category}/${parsed.slug}` } });
+    paths.push({ params: { slug: articlePath(parsed.category, parsed.slug) }, props: { category: parsed.category, articleSlug: parsed.slug } });
   }
 
   return paths;
 }
 
 interface Props {
-  slug: string;
+  category?: string;
+  articleSlug?: string;
 }
 
 const slug = Astro.params.slug;
@@ -52,7 +54,12 @@ let category = '';
 let articleSlug = '';
 let resolved: ResolvedEntry | null = null;
 
-if (parts.length === 1) {
+if (Astro.props.category && Astro.props.articleSlug) {
+  category = Astro.props.category;
+  articleSlug = Astro.props.articleSlug;
+  resolved = await getEntryWithFallback(category, articleSlug, locale);
+  view = resolved ? 'article' : 'not-found';
+} else if (parts.length === 1) {
   category = parts[0];
   view = CONTENT_TYPES.includes(category) ? 'list' : 'not-found';
 } else {

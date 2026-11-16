@@ -146,8 +146,8 @@
   },
   "home": {
     "meta": {
-      "title": "Zombies Aren't Real Wiki — Guides, Units & Maps",
-      "description": "Zombies Aren't Real wiki: field guides, military units, air support, civilian protection, and custom maps for the Steam strategy game."
+      "title": "Zombies Aren't Real Game Wiki — Guides, Units & Maps",
+      "description": "Zombies Aren't Real game wiki: learn the evacuation corridor, safe zones, unit upgrades, co-op, custom maps, and outbreak defense strategies."
     },
     "updates": {
       "title": "Recent updates"
@@ -230,8 +230,8 @@
       ]
     },
     "faq": {
-      "title": "FAQ",
-      "description": "A quick briefing on the game and this independent field manual.",
+      "title": "Zombies Aren't Real FAQ",
+      "description": "Answers to common Zombies Aren't Real questions about gameplay, safe zones, evacuation, maps, multiplayer, and the game's platform.",
       "items": [
         {
           "question": "What is Zombies Aren't Real?",
@@ -244,6 +244,18 @@
         {
           "question": "Does the game support custom maps?",
           "answer": "Yes. The game includes a level editor and Steam Workshop support for sharing and playing custom maps."
+        },
+        {
+          "question": "How do you win a scenario?",
+          "answer": "Eliminate all zombies to win. The number of civilians saved determines your score, so protecting people matters alongside stopping the outbreak."
+        },
+        {
+          "question": "What is an evacuation corridor?",
+          "answer": "An evacuation corridor is a directional route used to guide civilians toward safety. Placement and pathfinding can change during Early Access, so check how civilians use the route in your current build."
+        },
+        {
+          "question": "What are safe zones for?",
+          "answer": "Safe zones and gates are defensive tools for protecting civilians. Plan the perimeter with its entrances and the soldiers covering its exposed approaches in mind."
         },
         {
           "question": "Is this the official game website?",
@@ -261,11 +273,17 @@
     "index": "FIELD MANUAL",
     "navigation": [
       { "label": "Overview", "href": "/", "icon": "lucide:radar", "number": "00" },
-      { "label": "Getting Started", "href": "/guides/beginner-guide/", "icon": "lucide:compass", "number": "01" },
-      { "label": "Units & Support", "href": "/items/", "icon": "lucide:crosshair", "number": "02" },
-      { "label": "Civilian Protection", "href": "/guides/civilian-protection/", "icon": "lucide:shield", "number": "03" },
-      { "label": "Maps & Workshop", "href": "/guides/maps-and-workshop/", "icon": "lucide:map", "number": "04" },
-      { "label": "Co-op Operations", "href": "/guides/co-op/", "icon": "lucide:users", "number": "05" }
+      { "label": "Getting Started", "href": "/beginner-guide/", "icon": "lucide:compass", "number": "01" },
+      { "label": "Evac Corridor", "href": "/evac-corridor/", "icon": "lucide:route", "number": "02" },
+      { "label": "Safe Zones", "href": "/safe-zones/", "icon": "lucide:shield", "number": "03" },
+      { "label": "Defense Strategy", "href": "/defense-strategy/", "icon": "lucide:shield-check", "number": "04" },
+      { "label": "Units Tier List", "href": "/units-tier-list/", "icon": "lucide:crosshair", "number": "05" },
+      { "label": "Unit Upgrades", "href": "/upgrades/", "icon": "lucide:arrow-up-circle", "number": "06" },
+      { "label": "Boston Map", "href": "/maps/boston/", "icon": "lucide:map-pin", "number": "07" },
+      { "label": "Miami Map", "href": "/maps/miami/", "icon": "lucide:map-pin", "number": "08" },
+      { "label": "Custom Maps", "href": "/custom-maps/", "icon": "lucide:map", "number": "09" },
+      { "label": "Co-op Operations", "href": "/co-op/", "icon": "lucide:users", "number": "10" },
+      { "label": "FAQ", "href": "/faq/", "icon": "lucide:circle-help", "number": "11" }
     ],
     "externalLabel": "OFFICIAL CHANNELS",
     "steamLabel": "Game on Steam",
@@ -279,11 +297,12 @@
     "breadcrumb": "Command Center",
     "status": "KNOWLEDGE IS YOUR FIRST DEFENSE",
     "heroLabel": "TACTICAL BRIEFING / 001",
+    "heroGame": "Zombies Aren't Real Game Wiki: ",
     "heroTitle": "THEY AREN'T REAL.",
     "heroAccent": "UNTIL THEY ARE.",
-    "heroDescription": "Your field manual for the outbreak. Learn your units, plan the perimeter, and give the city a fighting chance.",
+    "heroDescription": "Zombies Aren't Real is a city-scale zombie defense game. Learn your units, plan the perimeter, and give the city a fighting chance.",
     "primary": "Get your first briefing",
-    "primaryHref": "/guides/beginner-guide/",
+    "primaryHref": "/beginner-guide/",
     "secondary": "Explore the arsenal",
     "secondaryHref": "/items/",
     "heroCaption": "ACTUAL GAMEPLAY / OFFICIAL STEAM SCREENSHOT",
@@ -296,19 +315,21 @@
     "earlyAccess": "EARLY ACCESS",
     "earlyAccessText": "The battlefield is evolving. Check each guide's review date.",
     "quickLinks": [
-      { "number": "01", "icon": "lucide:compass", "label": "First deployment", "detail": "Start with the essentials", "href": "/guides/beginner-guide/" },
-      { "number": "02", "icon": "lucide:crosshair", "label": "Know your forces", "detail": "Ground units & air support", "href": "/items/" },
-      { "number": "03", "icon": "lucide:shield", "label": "Protect civilians", "detail": "Plan beyond the kill count", "href": "/guides/civilian-protection/" },
-      { "number": "04", "icon": "lucide:map", "label": "Study the terrain", "detail": "Cities & custom maps", "href": "/guides/maps-and-workshop/" }
+      { "number": "01", "icon": "lucide:compass", "label": "Beginner guide", "detail": "Start with the essentials", "href": "/beginner-guide/" },
+      { "number": "02", "icon": "lucide:route", "label": "Evac corridor", "detail": "Guide civilians to safety", "href": "/evac-corridor/" },
+      { "number": "03", "icon": "lucide:shield", "label": "Safe zones", "detail": "Plan a defensible perimeter", "href": "/safe-zones/" },
+      { "number": "04", "icon": "lucide:crosshair", "label": "Unit comparison", "detail": "Compare each role", "href": "/units-tier-list/" }
     ],
     "guidesEyebrow": "INTELLIGENCE LIBRARY",
     "guidesTitle": "A better plan starts here.",
     "allGuides": "All field guides",
     "featured": [
-      { "label": "START HERE", "tone": "green", "title": "Your first deployment", "description": "Read the map, choose your positions, and prepare for the first wave of infection.", "href": "/guides/beginner-guide/", "image": "/images/game/screenshot-2.webp", "alt": "Official gameplay showing a city map and military deployment interface", "icon": "lucide:compass" },
-      { "label": "CIVILIAN PRIORITY", "tone": "amber", "title": "Hold the line. Save lives.", "description": "Why a civilian protection plan matters as much as your firepower.", "href": "/guides/civilian-protection/", "image": "/images/game/screenshot-4.webp", "alt": "Official gameplay showing the outbreak across city streets", "icon": "lucide:shield" },
-      { "label": "RECONNAISSANCE", "tone": "green", "title": "The city is your battlefield", "description": "Find your bearings in real-world cities and explore the Steam Workshop.", "href": "/guides/maps-and-workshop/", "image": "/images/game/screenshot-3.webp", "alt": "Official screenshot of canals and closely packed urban buildings", "icon": "lucide:map" },
-      { "label": "CO-OP OPERATIONS", "tone": "green", "title": "Two commanders. One city.", "description": "Bring a friend and agree on a plan before the outbreak begins.", "href": "/guides/co-op/", "image": "/images/game/screenshot-5.webp", "alt": "Official Zombies Aren't Real screenshot of military operations on a city map", "icon": "lucide:users" }
+      { "label": "START HERE", "tone": "green", "title": "Your first deployment", "description": "Read the map, choose your positions, and prepare for the first wave of infection.", "href": "/beginner-guide/", "image": "/images/game/screenshot-2.webp", "alt": "Official gameplay showing a city map and military deployment interface", "icon": "lucide:compass" },
+      { "label": "CIVILIAN PRIORITY", "tone": "amber", "title": "Build a safe zone", "description": "Plan your perimeter, gates, and coverage before the outbreak begins.", "href": "/safe-zones/", "image": "/images/game/screenshot-4.webp", "alt": "Official gameplay showing the outbreak across city streets", "icon": "lucide:shield" },
+      { "label": "EVACUATION", "tone": "green", "title": "Guide civilians to safety", "description": "Learn how corridors and hold areas can support an evacuation plan.", "href": "/evac-corridor/", "image": "/images/game/screenshot-3.webp", "alt": "Official screenshot of canals and closely packed urban buildings", "icon": "lucide:route" },
+      { "label": "CO-OP OPERATIONS", "tone": "green", "title": "Two commanders. One city.", "description": "Bring a friend and agree on a plan before the outbreak begins.", "href": "/co-op/", "image": "/images/game/screenshot-5.webp", "alt": "Official Zombies Aren't Real screenshot of military operations on a city map", "icon": "lucide:users" },
+      { "label": "CAMPAIGN CASE STUDY", "tone": "green", "title": "Boston: five-level field notes", "description": "See how one player adapted their defense across Boston's campaign.", "href": "/maps/boston/", "image": "/images/game/screenshot-1.webp", "alt": "Official game screenshot showing a city during an outbreak", "icon": "lucide:map-pin" },
+      { "label": "CAMPAIGN CASE STUDY", "tone": "green", "title": "Miami: defending the bridges", "description": "Follow one player's bridge defenses, setbacks, and retries.", "href": "/maps/miami/", "image": "/images/game/screenshot-6.webp", "alt": "Official game screenshot showing an urban defense", "icon": "lucide:map-pin" }
     ],
     "readGuide": "Read field guide",
     "fieldNoteLabel": "COMMANDER'S NOTE",
@@ -321,7 +342,7 @@
     "referenceTitle": "Know what you're deploying.",
     "referenceLink": "Open the reference",
     "forces": [
-      { "code": "GROUND / 01", "title": "Ground Forces", "description": "Snipers, turrets, mortar squads, and garrisons.", "icon": "lucide:crosshair", "href": "/items/ground-forces/" },
+      { "code": "GROUND / 01", "title": "Unit Comparison", "description": "Compare garrisons, mortars, snipers, and turrets by role.", "icon": "lucide:crosshair", "href": "/units-tier-list/" },
       { "code": "AIR / 02", "title": "Air Support", "description": "Bombers and gun helicopters when the line breaks.", "icon": "lucide:plane", "href": "/items/air-support/" },
       { "code": "DEFENSE / 03", "title": "Protective Structures", "description": "Safe zones, gates, and a plan for the population.", "icon": "lucide:shield-check", "href": "/items/defenses/" }
     ],

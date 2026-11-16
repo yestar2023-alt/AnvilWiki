@@ -19,6 +19,8 @@
  * have a published MDX for it. Returned paths use the same raw convention;
  * the sitemap filter decodes `pathname` before lookup (CJK slugs).
  */
+import { articlePath } from '../config/article-paths';
+
 export function fallbackDetailPaths(
   coverage: Map<string, Set<string>>,
   locales: readonly string[],
@@ -30,7 +32,8 @@ export function fallbackDetailPaths(
     for (const covKey of Array.from(coverage.keys()).sort()) {
       const cov = coverage.get(covKey);
       if (cov?.has(defaultLocale) && !cov.has(locale)) {
-        paths.push(`/${locale}/${covKey}`);
+        const [category, ...slug] = covKey.split('/');
+        paths.push(`/${locale}/${articlePath(category, slug.join('/'))}`);
       }
     }
   }
