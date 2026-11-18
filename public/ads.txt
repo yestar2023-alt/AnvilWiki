@@ -1,8 +1,4 @@
 # ads.txt — authorized digital sellers.
 #
-# Status (2026-11-18): no authorized sellers are configured.
-#
-# After AdSense approval, add Google's authorized seller line using the real
-# publisher ID from the AdSense dashboard. Do not add a placeholder ID.
-#
 # Learn more: https://iabtechlab.com/ads-txt/
+google.com, pub-3949992151145167, DIRECT, f08c47fec0942fa0
