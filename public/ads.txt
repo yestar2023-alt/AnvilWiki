@@ -1,12 +1,8 @@
 # ads.txt — authorized digital sellers.
 #
-# BEFORE AdSense approval: leave this file comments-only (that is valid —
-# a placeholder pub-ID would be an INVALID data line).
+# Status (2026-11-18): no authorized sellers are configured.
 #
-# AFTER AdSense approves your site: replace pub-XXXXXXXXXXXXXXXX with your
-# real publisher ID (shown in the AdSense dashboard) and DELETE the leading
-# "#" from the line below:
-#
-# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+# After AdSense approval, add Google's authorized seller line using the real
+# publisher ID from the AdSense dashboard. Do not add a placeholder ID.
 #
 # Learn more: https://iabtechlab.com/ads-txt/

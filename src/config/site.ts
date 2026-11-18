@@ -24,6 +24,8 @@ export interface SiteConfig {
    * if you run no social channels, set this.
    */
   contactEmail?: string;
+  /** Public corrections/contact URL (for example, a GitHub Issues page). */
+  contactUrl?: string;
   social: {
     /** Official game website URL (the game itself, not the wiki). */
     official: string;
@@ -31,6 +33,7 @@ export interface SiteConfig {
     youtube?: string;
     twitter?: string;
     reddit?: string;
+    github?: string;
   };
   /**
    * Canonical URLs about the GAME (Steam page, official site, Wikipedia entry…).
@@ -78,9 +81,11 @@ export const site: SiteConfig = {
   legalNotice: 'An independent fan-made wiki. Not affiliated with or endorsed by Jogamedev. Game images belong to their respective owners.',
   // Set a real address if you run no social channels — the contact page
   // renders it as a mailto link.
-  contactEmail: '',
+  contactEmail: 'contact@zombies-arentrealwiki.wiki',
+  contactUrl: 'https://github.com/yestar2023-alt/AnvilWiki/issues',
   social: {
     official: 'https://store.steampowered.com/app/5185890/Zombies_Arent_Real/',
+    github: 'https://github.com/yestar2023-alt/AnvilWiki',
   },
   sameAs: [
     'https://store.steampowered.com/app/5185890/Zombies_Arent_Real/',

@@ -17,35 +17,44 @@ const year = new Date().getFullYear();
   page === 'about' && (
     <>
       <p>
-        {site.name} is a fan-made community wiki dedicated to {game}, a {site.game.genre} on{' '}
-        {site.game.platform} developed by {site.game.developer}. Our mission is to provide accurate,
-        up-to-date guides, tips, and reference material to help players get the most out of the
-        game.
+        {site.name} is an independent fan-made field manual for {game}, a {site.game.genre} on{' '}
+        {site.game.platform} developed by {site.game.developer}. The site focuses on the decisions a
+        commander makes before and during an outbreak: where to hold, how to move civilians, which
+        forces to deploy, and what to check when a plan fails.
       </p>
       <h2>What We Cover</h2>
       <ul>
-        <li>Boss strategies and attack patterns</li>
-        <li>Item locations, stats, and crafting recipes</li>
-        <li>Active redeemable codes (updated daily)</li>
-        <li>Tier lists and build recommendations</li>
-        <li>Progression guides for new and returning players</li>
+        <li>Beginner planning and the prepare-then-outbreak loop</li>
+        <li>Evacuation corridors, safe zones, gates, and civilian protection</li>
+        <li>Ground-force roles, air support, defensive structures, and upgrades</li>
+        <li>Boston and Miami player case studies with timestamped sources</li>
+        <li>Co-op, custom maps, system requirements, and frequently asked questions</li>
       </ul>
-      <h2>Community-Driven</h2>
+      <h2>How We Research</h2>
       <p>
-        This wiki is maintained by volunteers. If you spot an error or have content to contribute,
-        join our Discord and let us know. All content is freely accessible — no account required.
+        We start with the official {game} Steam page, the developer's press kit, and Steam Workshop
+        listings. Where a guide relies on a player video or a third-party report, we identify the
+        source and include a timestamp or link when one is available. We distinguish official facts,
+        player-reported results, and our own planning advice.
       </p>
-      <h2>Contact</h2>
       <p>
-        Reach us via our{' '}
-        <a href={site.social.discord} target="_blank" rel="noopener noreferrer">
-          Discord server
-        </a>{' '}
-        or{' '}
-        <a href={site.social.official} target="_blank" rel="noopener noreferrer">
-          the game's official channels
+        We do not claim to have independently tested every mechanic. {game} is in Early Access, so
+        unit values, interface labels, and balance can change between builds. Each guide shows when
+        it was last reviewed.
+      </p>
+      <h2>Independence</h2>
+      <p>
+        {site.name} is not affiliated with or endorsed by {site.game.developer}. Game names,
+        screenshots, and other game assets belong to their respective rights holders and are used
+        for identification, commentary, and player guidance.
+      </p>
+      <h2>Corrections and Contact</h2>
+      <p>
+        Found an error, an outdated mechanic, or a source we should add? Open an issue in the{' '}
+        <a href={site.contactUrl} target="_blank" rel="noopener noreferrer">
+          public corrections tracker
         </a>
-        .
+        . No account is needed to read the site; a GitHub account is needed to post.
       </p>
     </>
   )
@@ -58,49 +67,64 @@ const year = new Date().getFullYear();
         This privacy policy describes how {site.name} ("we", "us", or "our") handles information
         when you visit this website.
       </p>
-      <h2>Information We Collect</h2>
+      <h2>Summary</h2>
       <p>
-        {site.name} is a static website. We do not require you to create an account or submit
-        personal information. We do not directly collect or store personal data.
+        {site.name} is a static fan-made website. There are no user accounts, comments, newsletters,
+        or checkout flows. We do not ask visitors to submit personal information. Analytics is loaded
+        only after you accept the cookie prompt, and no third-party display advertising is currently
+        enabled.
       </p>
-      <h2>Third-Party Services</h2>
-      <p>
-        We use third-party services that may collect information as described in their respective
-        privacy policies:
-      </p>
+      <h2>Information Processed by Service Providers</h2>
       <ul>
         <li>
-          <strong>Advertising partners</strong> (e.g. Google AdSense, Adsterra) — may use cookies to
-          serve relevant ads. You can opt out of personalized advertising via your browser settings.
+          <strong>Cloudflare</strong> hosts the site and processes request data such as IP address,
+          requested URL, user agent, and approximate location for content delivery, security, and
+          abuse prevention.
         </li>
         <li>
-          <strong>Analytics</strong> (e.g. Google Analytics, Cloudflare Web Analytics, VibeCafé) —
-          GA may collect anonymized usage data such as page views and approximate location
-          (cookie-based, loaded only after you accept the consent banner); Cloudflare Web Analytics
-          is cookieless and collects aggregate page-view data. VibeCafé (optional product
-          telemetry, loaded only when the site owner enables it) collects page-visit data.
+          <strong>Google Tag Manager</strong> (container <code>GTM-N752K4GB</code>) loads only after
+          you press <em>Accept</em> in the cookie banner. The container is used to manage measurement
+          tags, which may include Google Analytics 4. Those tags may set cookies and collect page
+          views, approximate location, device and browser information, and interaction events.
         </li>
         <li>
-          <strong>Cloudflare</strong> — our hosting provider, which may process basic request data
-          for security and performance (and serve Web Analytics when enabled, see above).
+          <strong>Local browser storage</strong> holds your cookie choice
+          (<code>aw-cookie-consent</code>) and theme preference (<code>theme</code>). This stays in
+          your browser and is not sent to us.
         </li>
         <li>
-          <strong>Comments</strong> (giscus, opt-in) — when the comment section is enabled,
-          giscus.app loads an embedded GitHub view; viewing it exposes your IP address and browser
-          info to that service, and signing in to comment is handled by GitHub under its own
-          privacy policy.
-        </li>
-        <li>
-          <strong>Embedded videos</strong> (YouTube) — pages with videos load thumbnail images
-          from i.ytimg.com and, after you press play, the YouTube player from youtube-nocookie.com.
-          Until you interact, no YouTube cookies are set.
+          <strong>External links</strong> to Steam, YouTube, GitHub, and other sites open only when
+          you choose them. Those services apply their own privacy policies and may set cookies after
+          you arrive.
         </li>
       </ul>
-      <h2>Cookies</h2>
+      <h2>Cookies and Consent</h2>
       <p>
-        Some third-party services set cookies. You can control cookies through your browser
-        settings. Disabling cookies may affect ad personalization but will not prevent you from
-        accessing site content.
+        Before you accept, the Google Tag Manager container is not loaded. If you decline, it stays
+        off for that choice stored in your browser. You can clear site data in your browser at any
+        time; the banner will appear again on your next visit. Google Analytics cookies can also be
+        controlled through your browser settings and Google's available opt-out controls.
+      </p>
+      <h2>Advertising</h2>
+      <p>
+        No third-party display advertising is currently enabled on this site. If advertising is
+        added later, this policy will be updated before ads are served, including the relevant
+        partners, cookie use, and opt-out choices.
+      </p>
+      <h2>Data Sharing and Retention</h2>
+      <p>
+        We do not sell personal information. Service providers process data under their own terms
+        and retention schedules. Because this site has no accounts or user database, we generally do
+        not hold personal data that we can retrieve or delete on your behalf.
+      </p>
+      <h2>Your Choices</h2>
+      <p>
+        You can decline analytics, clear cookies and local storage, or use browser privacy controls.
+        For a privacy question about this site, open an issue in the{' '}
+        <a href={site.contactUrl} target="_blank" rel="noopener noreferrer">
+          public corrections tracker
+        </a>
+        .
       </p>
       <h2>Children's Privacy</h2>
       <p>
@@ -171,12 +195,12 @@ const year = new Date().getFullYear();
       </p>
       <h2>DMCA / Takedown</h2>
       <p>
-        If you believe any content on this site infringes your copyright, please contact us via our{' '}
-        <a href={site.social.discord} target="_blank" rel="noopener noreferrer">
-          Discord server
+        If you believe any content on this site infringes your copyright, open an issue in the{' '}
+        <a href={site.contactUrl} target="_blank" rel="noopener noreferrer">
+          public corrections tracker
         </a>{' '}
-        with a detailed description of the allegedly infringing material. We will review and respond
-        to valid requests promptly.
+        with the page URL, the work you believe is infringed, and enough information for us to
+        review the request. We will respond to valid requests promptly.
       </p>
       <h2>Fan-Made Notice</h2>
       <p>{site.legalNotice}</p>
@@ -190,39 +214,23 @@ const year = new Date().getFullYear();
       {/* h2, not h1 — LegalPage already renders the page H1 (single-H1 rule). */}
       <h2>Contact {site.name}</h2>
       <p>
-        {site.name} is a fan-made wiki. Reach us or contribute through any of the channels below.
+        {site.name} is an independent fan-made wiki. Use the public corrections tracker for content
+        errors, outdated mechanics, source suggestions, or copyright concerns. No account is needed
+        to read the site; a GitHub account is needed to open an issue.
       </p>
-      <h2>Community</h2>
+      <h2>Site Corrections</h2>
       <ul>
-        {site.social.official && (
+        <li>
+          <strong>Report an issue:</strong>{' '}
+          <a href={site.contactUrl} target="_blank" rel="noopener noreferrer">
+            {site.contactUrl}
+          </a>
+        </li>
+        {site.social.github && (
           <li>
-            <strong>Official game website:</strong>{' '}
-            <a href={site.social.official} target="_blank" rel="noopener noreferrer">
-              {site.social.official}
-            </a>
-          </li>
-        )}
-        {site.social.discord && (
-          <li>
-            <strong>Discord:</strong>{' '}
-            <a href={site.social.discord} target="_blank" rel="noopener noreferrer">
-              Join our server
-            </a>
-          </li>
-        )}
-        {site.social.reddit && (
-          <li>
-            <strong>Reddit:</strong>{' '}
-            <a href={site.social.reddit} target="_blank" rel="noopener noreferrer">
-              r/{site.game.name.replace(/\s+/g, '')}
-            </a>
-          </li>
-        )}
-        {site.social.youtube && (
-          <li>
-            <strong>YouTube:</strong>{' '}
-            <a href={site.social.youtube} target="_blank" rel="noopener noreferrer">
-              {site.name} channel
+            <strong>Project repository:</strong>{' '}
+            <a href={site.social.github} target="_blank" rel="noopener noreferrer">
+              {site.social.github}
             </a>
           </li>
         )}
@@ -231,11 +239,25 @@ const year = new Date().getFullYear();
             <strong>Email:</strong> <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>
           </li>
         )}
+        {site.social.official && (
+          <li>
+            <strong>Game's official Steam page:</strong>{' '}
+            <a href={site.social.official} target="_blank" rel="noopener noreferrer">
+              {site.social.official}
+            </a>
+          </li>
+        )}
+      </ul>
+      <h2>What to Include</h2>
+      <ul>
+        <li>The page URL and the section that needs correction</li>
+        <li>What is wrong or out of date</li>
+        <li>A source, screenshot, or date/version where possible</li>
       </ul>
       <h2>Contributing</h2>
       <p>
-        Found a typo or outdated info? Want to add a guide? This wiki is open source — submit changes
-        via pull requests or through any channel listed above.
+        The site is built from a public repository. Source corrections and additional evidence can
+        be proposed through the corrections tracker or a pull request.
       </p>
       <h2>Reporting Issues</h2>
       <p>
