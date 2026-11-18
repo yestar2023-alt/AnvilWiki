@@ -120,7 +120,8 @@ const year = new Date().getFullYear();
       <h2>Your Choices</h2>
       <p>
         You can decline analytics, clear cookies and local storage, or use browser privacy controls.
-        For a privacy question about this site, open an issue in the{' '}
+        For a privacy question about this site, email{' '}
+        <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a> or open an issue in the{' '}
         <a href={site.contactUrl} target="_blank" rel="noopener noreferrer">
           public corrections tracker
         </a>
