@@ -70,9 +70,8 @@ const year = new Date().getFullYear();
       <h2>Summary</h2>
       <p>
         {site.name} is a static fan-made website. There are no user accounts, comments, newsletters,
-        or checkout flows. We do not ask visitors to submit personal information. Analytics is loaded
-        only after you accept the cookie prompt, and no third-party display advertising is currently
-        enabled.
+        or checkout flows. We do not ask visitors to submit personal information. Analytics and
+        advertising scripts load only after you accept the cookie prompt.
       </p>
       <h2>Information Processed by Service Providers</h2>
       <ul>
@@ -83,13 +82,33 @@ const year = new Date().getFullYear();
         </li>
         <li>
           <strong>Google Tag Manager</strong> (container <code>GTM-N752K4GB</code>) loads only after
-          you press <em>Accept</em> in the cookie banner. The container is used to manage measurement
-          tags, which may include Google Analytics 4. Those tags may set cookies and collect page
-          views, approximate location, device and browser information, and interaction events.
+          you press <em>Accept</em> in the cookie banner. The container is used to manage
+          measurement tags, which may include Google Analytics 4. Those tags may set cookies and
+          collect page views, approximate location, device and browser information, and interaction
+          events.
         </li>
         <li>
-          <strong>Local browser storage</strong> holds your cookie choice
-          (<code>aw-cookie-consent</code>) and theme preference (<code>theme</code>). This stays in
+          <strong>Google AdSense</strong> (publisher <code>pub-3949992151145167</code>) serves
+          display advertising. Google and its partners may use cookies, including the DoubleClick
+          cookie, to serve ads based on your visits to this and other websites. Google may collect
+          your IP address, approximate location, device and browser information, and ad interaction
+          data. See{' '}
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+            Google's Privacy Policy
+          </a>
+          and{' '}
+          <a
+            href="https://policies.google.com/technologies/partner-sites"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            how Google uses information from sites or apps that use our services
+          </a>
+          .
+        </li>
+        <li>
+          <strong>Local browser storage</strong> holds your cookie choice (
+          <code>aw-cookie-consent</code>) and theme preference (<code>theme</code>). This stays in
           your browser and is not sent to us.
         </li>
         <li>
@@ -100,16 +119,32 @@ const year = new Date().getFullYear();
       </ul>
       <h2>Cookies and Consent</h2>
       <p>
-        Before you accept, the Google Tag Manager container is not loaded. If you decline, it stays
-        off for that choice stored in your browser. You can clear site data in your browser at any
-        time; the banner will appear again on your next visit. Google Analytics cookies can also be
-        controlled through your browser settings and Google's available opt-out controls.
+        Before you accept, Google Tag Manager and Google AdSense are not loaded. If you decline,
+        they stay off for that choice stored in your browser. You can clear site data in your
+        browser at any time; the banner will appear again on your next visit. Analytics and
+        advertising cookies can also be controlled through your browser settings and Google's
+        available opt-out controls.
       </p>
       <h2>Advertising</h2>
       <p>
-        No third-party display advertising is currently enabled on this site. If advertising is
-        added later, this policy will be updated before ads are served, including the relevant
-        partners, cookie use, and opt-out choices.
+        We use Google AdSense to display advertising. Third-party vendors, including Google, use
+        cookies to serve ads based on your prior visits to this website or other websites. Google's
+        use of advertising cookies enables it and its partners to serve ads to you based on your
+        visit to this site and/or other sites on the Internet. You may opt out of personalized
+        advertising by visiting
+        <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">
+          Google Ads Settings
+        </a>
+        . You can also opt out of some third-party vendors' use of cookies for personalized
+        advertising at
+        <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer">
+          aboutads.info
+        </a>
+        .
+      </p>
+      <p>
+        Ads are requested only after you accept the cookie prompt. If you decline, advertising
+        scripts are not loaded.
       </p>
       <h2>Data Sharing and Retention</h2>
       <p>
@@ -119,8 +154,8 @@ const year = new Date().getFullYear();
       </p>
       <h2>Your Choices</h2>
       <p>
-        You can decline analytics, clear cookies and local storage, or use browser privacy controls.
-        For a privacy question about this site, email{' '}
+        You can decline analytics and advertising, clear cookies and local storage, or use browser
+        privacy controls. For a privacy question about this site, email{' '}
         <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a> or open an issue in the{' '}
         <a href={site.contactUrl} target="_blank" rel="noopener noreferrer">
           public corrections tracker
@@ -262,8 +297,7 @@ const year = new Date().getFullYear();
       </p>
       <h2>Reporting Issues</h2>
       <p>
-        For copyright or takedown requests, see our{' '}
-        <a href="/copyright/">Copyright page</a>.
+        For copyright or takedown requests, see our <a href="/copyright/">Copyright page</a>.
       </p>
     </>
   )
