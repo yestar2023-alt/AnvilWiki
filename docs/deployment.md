@@ -235,7 +235,7 @@ Dashboard（方案 C）在 Pages → **Settings** → **Environment variables** 
 | `PUBLIC_ADSTERRA_SLOT_STICKY_320X50`    | 可选 | Adsterra 文章页底部锚位（`MobileAnchorAd`）            |
 | `PUBLIC_ADSTERRA_SLOT_SIDEBAR_160X300`  | 可选 | Adsterra 160×300 竖幅（手册课页粘性）                  |
 | `PUBLIC_ADSTERRA_SLOT_SIDEBAR_160X600`  | 可选 | Adsterra 160×600 竖幅（≥1700px 视口页边固定）          |
-| `PUBLIC_ADSTERRA_SLOT_SIDEBAR_300X250`  | 可选 | Adsterra 300×250（示例单元，模板未挂载）               |
+| `PUBLIC_ADSTERRA_SLOT_SIDEBAR_300X250`  | 可选 | Adsterra 300×250（文章页桌面右栏顶部，≥1280px）        |
 | `PUBLIC_GA_ID`              | 可选 | Google Analytics ID（有 cookie，经同意横幅门控）       |
 | `PUBLIC_GTM_ID`             | 可选 | Google Tag Manager ID（有 cookie，经同意横幅门控）     |
 | `PUBLIC_CF_BEACON_TOKEN`    | 可选 | Cloudflare Web Analytics beacon token（无 cookie）     |

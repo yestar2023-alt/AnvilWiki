@@ -1497,7 +1497,7 @@ describe('sitemap', () => {
 | `PUBLIC_ADSTERRA_SLOT_STICKY_320X50` | 文章页底部锚位（`MobileAnchorAd`，v2.28.0） |
 | `PUBLIC_ADSTERRA_SLOT_SIDEBAR_160X300` | 160×300 竖幅（手册课页粘性） |
 | `PUBLIC_ADSTERRA_SLOT_SIDEBAR_160X600` | 160×600 竖幅（≥1700px 视口页边固定） |
-| `PUBLIC_ADSTERRA_SLOT_SIDEBAR_300X250` | 300×250（示例单元，模板未挂载） |
+| `PUBLIC_ADSTERRA_SLOT_SIDEBAR_300X250` | 300×250（文章页桌面右栏顶部，≥1280px） |
 
 > 所有广告变量为空时，对应广告组件 `return null` 不渲染。新手部署时不填也能正常上线。
 

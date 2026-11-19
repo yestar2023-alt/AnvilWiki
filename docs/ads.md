@@ -165,7 +165,7 @@ Google 的[广告投放位置政策](https://support.google.com/adsense/answer/1
 | `sticky-320x50` | 320×50 | 文章页底部锚位 `MobileAnchorAd`(可关闭/零 CLS/同意门控,见上条) |
 | `sidebar-160x300` | 160×300 | 手册课页目录下粘性 |
 | `sidebar-160x600` | 160×600 | 手册课页左右页边固定(≥1700px 视口,左右各一) |
-| `sidebar-300x250` | 300×250 | **已建未挂载**(示例单元;需要时用 `<AdsterraSlot name="sidebar-300x250" …/>` 自行挂) |
+| `sidebar-300x250` | 300×250 | 文章页桌面右栏顶部(≥1280px 视口) |
 
 > fork 清理:这 6 个 html 初始化时按**内容**判定清理——把内容换成你自己的广告代码后,重跑 apply-template 不会被误删;仍含模板 demo 单元 key 的原样文件才会被移除。
 
