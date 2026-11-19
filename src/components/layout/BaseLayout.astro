@@ -243,13 +243,25 @@ const privacyLabel = consent?.privacyLabel ?? footerStrings.privacyPolicy ?? 'Pr
     {gscVerification && <meta name="google-site-verification" content={gscVerification} />}
 
     {/*
-      Analytics / AdSense are injected DYNAMICALLY (consent-gated).
-      BaseLayout only defines the loader; CookieConsent.astro calls it after
-      the visitor accepts. See GDPR note in AGENTS.md. No tracking env vars
-      → this block renders nothing → zero JS.
+      AdSense loader — static in <head> on every page so Google can detect the
+      site and serve ads. Ad units remain env-gated; this only loads the
+      library. GTM/GA stay consent-gated in the dynamic block below.
     */}
-    {(gtmId || gaId || adsenseClient) && (
-      <script is:inline define:vars={{ gtmId, gaId, adsenseClient }}>
+    {adsenseClient && (
+      <script
+        async
+        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClient}`}
+        crossorigin="anonymous"
+      />
+    )}
+
+    {/*
+      GTM / GA are injected DYNAMICALLY (consent-gated). BaseLayout only
+      defines the loader; CookieConsent.astro calls it after the visitor
+      accepts. No tracking env vars → this block renders nothing → zero JS.
+    */}
+    {(gtmId || gaId) && (
+      <script is:inline define:vars={{ gtmId, gaId }}>
         window.__awLoadTrackers = () => {
           if (window.__awTrackersLoaded) return;
           window.__awTrackersLoaded = true;
@@ -271,15 +283,6 @@ const privacyLabel = consent?.privacyLabel ?? footerStrings.privacyPolicy ?? 'Pr
             }
             gtag('js', new Date());
             gtag('config', gaId);
-          }
-          if (adsenseClient) {
-            const s = document.createElement('script');
-            s.async = true;
-            s.crossOrigin = 'anonymous';
-            s.src =
-              'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' +
-              adsenseClient;
-            document.head.appendChild(s);
           }
         };
       </script>
