@@ -41,6 +41,7 @@ interface Props {
   height: number;
   /** Set to `false` to hide the "Advertisement" label (labels default on). */
   label?: boolean;
+  compact?: boolean;
   /**
    * Hide below md (fixed-size creatives clip inside a narrower iframe —
    * a 728 creative in a ~375px viewport shows ~47% and an inner scrollbar).
@@ -52,7 +53,7 @@ interface Props {
 
 import { currentSharedStrings } from '~/lib/shared-ui';
 
-const { name, width, height, label = true, hideOnMobile = false } = Astro.props;
+const { name, width, height, label = true, compact = false, hideOnMobile = false } = Astro.props;
 const envKey = `PUBLIC_ADSTERRA_SLOT_${name.replace(/-/g, '_').toUpperCase()}`;
 const show = !!import.meta.env[envKey];
 // Same env condition under which BaseLayout renders CookieConsent — when
@@ -71,7 +72,8 @@ const adLabel = sharedStrings.adLabel ?? 'Advertisement';
     <>
       <div
         class:list={[
-          'my-8 flex-col items-center justify-center',
+          'flex-col items-center justify-center',
+          compact ? 'my-2' : 'my-8',
           hideOnMobile ? 'hidden md:flex' : 'flex',
         ]}
       >

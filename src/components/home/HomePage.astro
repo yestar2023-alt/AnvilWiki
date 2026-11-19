@@ -1,5 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components';
+import AdsterraSlot from '~/components/ads/AdsterraSlot.astro';
 import LocaleLayout from '~/components/layout/LocaleLayout.astro';
 import { site } from '~/config/site';
 import { type Locale } from '~/i18n/routing';
@@ -44,6 +45,15 @@ const command = ui.command;
       <div class="command-location">
         <span><Icon name="lucide:radar" />{command.breadcrumb}<span class="location-slash">/</span><span class="location-home">{ui.nav.home}</span></span>
         <span class="micro readiness"><i></i>{command.status}</span>
+      </div>
+
+      <div class="home-banner">
+        <div class="home-banner-wide">
+          <AdsterraSlot name="incontent-728x90" width={728} height={90} compact />
+        </div>
+        <div class="home-banner-narrow">
+          <AdsterraSlot name="sticky-320x50" width={320} height={50} compact />
+        </div>
       </div>
 
       <section class="command-hero" aria-labelledby="briefing-title">
@@ -122,3 +132,32 @@ const command = ui.command;
     </div>
   </div>
 </LocaleLayout>
+
+<style>
+  .home-banner {
+    container-type: inline-size;
+  }
+
+  .home-banner-wide,
+  .home-banner-narrow {
+    display: none;
+  }
+
+  @container (320px <= width < 728px) {
+    .home-banner-narrow {
+      display: block;
+    }
+  }
+
+  @container (width >= 728px) {
+    .home-banner-wide {
+      display: block;
+    }
+  }
+
+  @media (width < 352px) {
+    .home-banner {
+      margin-inline: -16px;
+    }
+  }
+</style>
