@@ -1,0 +1,381 @@
+{
+  "$schema": "../../docs/home.schema.json",
+  "site": {
+    "name": "Zombies Aren't Real Wiki",
+    "shortName": "ZAR Wiki",
+    "description": "Zombies Aren't Real wiki sa Filipino: mga gabay sa labanan, military units, air support, proteksyon ng sibilyan, at custom maps para sa Steam strategy game.",
+    "tagline": "Basahin ang lungsod. Panatilihin ang depensa. Iligtas ang mga buhay.",
+    "legalNotice": "Isang independent fan-made wiki. Hindi kaakibat o ineendorso ng Jogamedev. Ang mga larawan ng laro ay pagmamay-ari ng kani-kanilang may-ari."
+  },
+  "nav": {
+    "home": "Tahanan",
+    "toggleTheme": "Palitan ang tema",
+    "menu": "Menu",
+    "close": "Isara",
+    "search": "Hanapin",
+    "language": "Wika",
+    "guides": "Mga Gabay",
+    "items": "Mga Unit at Suporta"
+  },
+  "search": {
+    "placeholder": "Hanapin sa field manual...",
+    "noResults": "Walang nahanap na tugma",
+    "loadError": "Hindi na-load ang paghahanap — i-refresh ang pahina at subukan muli."
+  },
+  "shared": {
+    "lastUpdated": "Huling na-update",
+    "publishedOn": "Inilathala noong",
+    "noArticles": "Wala pang artikulo. Bumalik na lang muli mamaya!",
+    "defaultListDescription": "Tingnan ang lahat ng artikulo sa {title} — mga gabay, tip, tier list, at napapanahong reference table sa iisang lugar.",
+    "relatedArticles": "Mga Kaugnay na Artikulo",
+    "onThisPage": "Sa pahinang ito",
+    "browseAll": "Tingnan lahat",
+    "viewAll": "Ipakita lahat",
+    "commentsHeading": "Mga Komento",
+    "share": "Ibahagi",
+    "copyLink": "Kopyahin ang link",
+    "copied": "Nakopya na!",
+    "consentText": "Gumagamit kami ng cookies para sa analytics at ads upang manatiling libre ang site na ito.",
+    "accept": "Tanggapin",
+    "decline": "Tanggihan",
+    "consentTitle": "Cookies",
+    "bossCard": {
+      "title": "Buod ng Boss",
+      "hp": "HP",
+      "weakness": "Kahinaan",
+      "resistant": "Matibay laban sa",
+      "location": "Lokasyon",
+      "level": "Inirerekomendang Antas"
+    },
+    "codesTable": {
+      "active": "Aktibong Code",
+      "expired": "Paso nang Code",
+      "reward": "Gantimpala",
+      "expires": "Magtatapos",
+      "source": "Pinagmulan",
+      "code": "Code"
+    },
+    "codesFaq": [
+      {
+        "question": "Paano mag-redeem ng mga code?",
+        "answer": "Buksan ang laro, i-click ang settings gear sa kanang itaas, i-paste ang code sa Redeem Code field, at kumpirmahin. Case-sensitive ang mga code."
+      },
+      {
+        "question": "Bakit tumitigil gumana ang mga code?",
+        "answer": "Nag-e-expire ang mga code ayon sa iskedyul ng developer (karaniwang buwanan o kasabay ng malalaking update), at ang ilan ay isang gamit lamang bawat account. Regular na sinusuri ang pahinang ito."
+      },
+      {
+        "question": "Gaano kadalas naglalabas ng bagong code?",
+        "answer": "Karaniwang may bagong code tuwing may malaking update sa laro. I-bookmark ang pahinang ito at bumalik pagkatapos ng bawat patch."
+      },
+      {
+        "question": "Nag-e-expire ba ang mga code?",
+        "answer": "Oo — karamihan sa mga code ay may petsa ng pag-expire na makikita sa tabi ng bawat code. Inililipat ang mga paso nang code sa talahanayan sa ibaba."
+      }
+    ],
+    "possiblyOutdated": "Huling sinuri ang gabay na ito noong",
+    "outdatedNote": "— maaaring nagbago na ang laro mula noon. Posibleng luma na ang ilang detalye.",
+    "prevArticle": "Nakaraan",
+    "nextArticle": "Susunod",
+    "minuteRead": "min na pagbasa",
+    "wasThisHelpful": "Nakatulong ba ito?",
+    "feedbackThanks": "Salamat sa iyong feedback!",
+    "sponsoredLabel": "Naka-sponsor",
+    "visitSite": "Bisitahin ang site",
+    "recipeCard": {
+      "servings": "Serving",
+      "prepTime": "Paghahanda",
+      "cookTime": "Pagluluto",
+      "cuisine": "Lutuin",
+      "ingredients": "Mga Sangkap",
+      "tools": "Mga Kagamitan"
+    },
+    "relatedVideos": "Mga kaugnay na video",
+    "gallery": "Galeriya",
+    "gameVersion": "Bersyon ng laro",
+    "allTags": "Lahat ng Tag",
+    "tagsIndexDescription": "Mag-browse ng lahat ng artikulo ayon sa paksa.",
+    "articlesCount": "artikulo",
+    "recentTitle": "Mga Bagong Update",
+    "recentDescription": "Ang pinakabagong artikulo at update sa buong wiki, pinakabago muna.",
+    "sponsorTitle": "Suportahan ang wiki na ito",
+    "sponsorText": "Kung nakatulong sa iyo ang mga gabay na ito, isaalang-alang ang pagsuporta sa site.",
+    "sponsorButton": "Suportahan kami",
+    "notFoundSearchHint": "Subukang maghanap na lang sa wiki.",
+    "notFoundPopular": "Mga sikat na pahina",
+    "notFoundTitle": "404 - Hindi Nahanap ang Pahina",
+    "notFoundDescription": "Hindi umiiral ang pahinang hinahanap mo.",
+    "notFoundHeading": "Hindi Nahanap ang Pahina",
+    "notFoundText": "Maaaring naalis na o pansamantalang hindi magagamit ang pahinang hinahanap mo.",
+    "notFoundBackHome": "Bumalik sa tahanan",
+    "galleryLabels": {
+      "close": "Isara",
+      "prev": "Nakaraang larawan",
+      "next": "Susunod na larawan"
+    },
+    "quickAnswer": "Mabilis na Sagot",
+    "skipToContent": "Lumaktaw sa nilalaman",
+    "tapToCopy": "I-tap para kopyahin",
+    "open": "Buksan",
+    "playVideo": "I-play ang video",
+    "watchVideo": "Panoorin ang video",
+    "gameTrailer": "trailer",
+    "closeAd": "Isara ang ad",
+    "adLabel": "Anunsyo",
+    "codesFaqTitle": "FAQ sa mga Code",
+    "faqTitle": "Mga Madalas Itanong",
+    "toggleTheme": "Palitan ang tema",
+    "themeToggleTitle": "Maliwanag / Madilim / AMOLED na itim",
+    "fallbackNotice": "Bersyong Ingles (fallback)",
+    "copyQuickAnswer": "Kopyahin ang mabilis na sagot",
+    "feedbackYes": "Oo",
+    "feedbackNo": "Hindi",
+    "breadcrumbAria": "Breadcrumb",
+    "wikiNavAria": "Nabigasyon ng wiki",
+    "paginationAria": "Paglipat ng artikulo"
+  },
+  "overview": {
+    "guides": {
+      "overviewTitle": "Mga Gabay sa Labanan",
+      "overviewDescription": "Ihanda ang iyong unang deployment, protektahan ang mga sibilyan, galugarin ang mga custom map, at makipagtulungan sa co-op gamit ang mga gabay na ito sa Zombies Aren't Real."
+    },
+    "items": {
+      "overviewTitle": "Mga Unit at Suporta",
+      "overviewDescription": "Kilalanin ang ground forces, air support, at defensive structures na magagamit para pigilan ang outbreak sa Zombies Aren't Real."
+    }
+  },
+  "home": {
+    "meta": {
+      "title": "Zombies Aren't Real Wiki (Filipino) — Mga Gabay, Unit at Mapa",
+      "description": "Zombies Aren't Real wiki sa Filipino: alamin ang evacuation corridor, safe zones, unit upgrades, co-op, custom maps, at estratehiya sa depensa."
+    },
+    "updates": {
+      "title": "Mga bagong update"
+    },
+    "popular": {
+      "badge": "Sikat",
+      "title": "Mga dapat basahin",
+      "quickLinks": [
+        {
+          "label": "Mga Gabay",
+          "href": "/guides"
+        },
+        {
+          "label": "Mga Unit",
+          "href": "/items"
+        }
+      ]
+    },
+    "closingCta": {
+      "title": "Simulan ang iyong kampanya sa Zombies Aren't Real",
+      "description": "I-bookmark ang wiki na ito at bumalik pagkatapos ng bawat update ng laro.",
+      "primary": "Tingnan lahat",
+      "secondary": "Sumali sa komunidad"
+    },
+    "hero": {
+      "badge": "Zombies Aren't Real",
+      "title": "Zombies Aren't Real Wiki",
+      "description": "Planuhin ang iyong deployment, unawain ang iyong mga puwersa, at protektahan ang mga sibilyan sa Steam horde-defense strategy game.",
+      "ctaPrimary": "Simulang magbasa",
+      "ctaSecondary": "Tingnan lahat"
+    },
+    "start": {
+      "badge": "Mabilis na simula",
+      "title": "Bago ka rito?",
+      "cards": [
+        {
+          "number": "1",
+          "title": "Mga Gabay",
+          "description": "Basahin ang mga gabay",
+          "icon": "lucide:book-open",
+          "href": "/guides"
+        },
+        {
+          "number": "2",
+          "title": "Mga Unit",
+          "description": "Tingnan ang mga unit at suporta",
+          "icon": "lucide:book-open",
+          "href": "/items"
+        }
+      ]
+    },
+    "explore": {
+      "title": "Galugarin",
+      "description": "Mga seksyon ng nilalaman",
+      "modules": [
+        {
+          "order": 1,
+          "name": "Pagsisimula",
+          "description": "Hakbang-hakbang na gabay",
+          "href": "/guides",
+          "displayType": "steps",
+          "highlights": [
+            {
+              "label": "Hakbang 1",
+              "detail": "Basahin muna ang lungsod bago mag-deploy",
+              "badge": "Recon"
+            },
+            {
+              "label": "Hakbang 2",
+              "detail": "Bumuo ng plano para sa proteksyon ng sibilyan",
+              "badge": "Plano"
+            },
+            {
+              "label": "Hakbang 3",
+              "detail": "Pigilan ang outbreak at mag-adjust agad",
+              "badge": "Deploy"
+            }
+          ]
+        }
+      ]
+    },
+    "faq": {
+      "title": "FAQ sa Zombies Aren't Real",
+      "description": "Mga sagot sa karaniwang tanong tungkol sa Zombies Aren't Real — gameplay, safe zones, evacuation, mga mapa, multiplayer, at platform ng laro.",
+      "items": [
+        {
+          "question": "Ano ang Zombies Aren't Real?",
+          "answer": "Isa itong horde-defense strategy game na gawa ng Jogamedev. Nagko-command ka ng mga puwersang militar sa mga totoong mapa ng lungsod, pinipigilan ang lumalawak na zombie outbreak, at sinisikap na iligtas ang pinakamaraming sibilyan hangga't maaari."
+        },
+        {
+          "question": "May multiplayer ba ang Zombies Aren't Real?",
+          "answer": "Oo. Sinusuportahan ng bersyon sa Steam ang online co-op kasama ang isa pang manlalaro, bukod pa sa single-player."
+        },
+        {
+          "question": "Sinusuportahan ba ng laro ang custom maps?",
+          "answer": "Oo. May kasamang level editor ang laro at suporta sa Steam Workshop para sa pagbabahagi at paglalaro ng custom maps."
+        },
+        {
+          "question": "Paano manalo sa isang scenario?",
+          "answer": "Ubusin ang lahat ng zombie para manalo. Ang bilang ng mga nailigtas na sibilyan ang nagtatakda ng iyong iskor, kaya kasinghalaga ng pagtigil sa outbreak ang pagprotekta sa mga tao."
+        },
+        {
+          "question": "Ano ang evacuation corridor?",
+          "answer": "Ang evacuation corridor ay isang direksiyonal na ruta na ginagamit para gabayan ang mga sibilyan patungo sa ligtas na lugar. Maaaring magbago ang paglalagay at pathfinding sa Early Access, kaya suriin kung paano ito ginagamit ng mga sibilyan sa kasalukuyan mong build."
+        },
+        {
+          "question": "Para saan ang safe zones?",
+          "answer": "Ang safe zones at mga gate ay mga kagamitang pandepensa para protektahan ang mga sibilyan. Planuhin ang perimeter kasama ang mga pasukan nito at ang mga sundalong nagbabantay sa mga nakalantad na daanan."
+        },
+        {
+          "question": "Ito ba ang opisyal na website ng laro?",
+          "answer": "Hindi. Isa itong independent fan-made wiki. Ang Jogamedev ang gumagawa ng laro; nakalink sa buong site na ito ang opisyal na pahina sa Steam."
+        }
+      ]
+    }
+  },
+  "command": {
+    "manual": "HINDI OPISYAL NA FIELD MANUAL",
+    "edition": "EARLY ACCESS NA EDISYON",
+    "brandTop": "ZOMBIES AREN'T REAL",
+    "brandBottom": "WIKI / COMMAND CENTER",
+    "home": "Command Center",
+    "index": "FIELD MANUAL",
+    "navigation": [
+      { "label": "Pangkalahatang-ideya", "href": "/", "icon": "lucide:radar", "number": "00" },
+      { "label": "Gabay sa Baguhan", "href": "/beginner-guide/", "icon": "lucide:compass", "number": "01" },
+      { "label": "Evac Corridor", "href": "/evac-corridor/", "icon": "lucide:route", "number": "02" },
+      { "label": "Safe Zones", "href": "/safe-zones/", "icon": "lucide:shield", "number": "03" },
+      { "label": "Estratehiya sa Depensa", "href": "/defense-strategy/", "icon": "lucide:shield-check", "number": "04" },
+      { "label": "Tier List ng mga Unit", "href": "/units-tier-list/", "icon": "lucide:crosshair", "number": "05" },
+      { "label": "Mga Upgrade ng Unit", "href": "/upgrades/", "icon": "lucide:arrow-up-circle", "number": "06" },
+      { "label": "Mapa ng Boston", "href": "/maps/boston/", "icon": "lucide:map-pin", "number": "07" },
+      { "label": "Mapa ng Miami", "href": "/maps/miami/", "icon": "lucide:map-pin", "number": "08" },
+      { "label": "Mga Custom Map", "href": "/custom-maps/", "icon": "lucide:map", "number": "09" },
+      { "label": "Co-op Operations", "href": "/co-op/", "icon": "lucide:users", "number": "10" },
+      { "label": "FAQ", "href": "/faq/", "icon": "lucide:circle-help", "number": "11" }
+    ],
+    "externalLabel": "OPISYAL NA CHANNEL",
+    "steamLabel": "Laro sa Steam",
+    "workshopLabel": "Steam Workshop",
+    "workshopUrl": "https://steamcommunity.com/app/5185890/workshop/",
+    "developerLabel": "Website ng developer",
+    "developerUrl": "https://www.jogamedev.com/",
+    "railNote": "BASAHIN ANG LUNGSOD.",
+    "railNoteSecond": "IPAGTANGGOL ANG LINYA.",
+    "railCaption": "Tamang intel. Mas matalinong desisyon.",
+    "breadcrumb": "Command Center",
+    "status": "KAALAMAN ANG UNA MONG DEPENSA",
+    "heroLabel": "TACTICAL BRIEFING / 001",
+    "heroGame": "Zombies Aren't Real Game Wiki: ",
+    "heroTitle": "HINDI SILA TOTOO.",
+    "heroAccent": "HANGGANG SA TOTOO NA.",
+    "heroDescription": "Ang Zombies Aren't Real ay isang city-scale zombie defense game. Kabisaduhin ang iyong mga unit, planuhin ang perimeter, at bigyan ng pag-asa ang lungsod.",
+    "primary": "Kunin ang unang briefing",
+    "primaryHref": "/beginner-guide/",
+    "secondary": "Tingnan ang mga unit",
+    "secondaryHref": "/items/",
+    "heroCaption": "AKTWAL NA GAMEPLAY / OPISYAL NA STEAM SCREENSHOT",
+    "heroAlt": "Opisyal na screenshot ng Zombies Aren't Real na nagpapakita ng malaking lungsod, depensang militar, at kumakalat na outbreak",
+    "objectiveLabel": "PANGUNAHING LAYUNIN",
+    "objective": "ILIGTAS ANG MGA BUHAY.",
+    "heroTags": ["TOTOONG LUNGSOD", "TAKTIKAL NA DEPENSA", "1–2 MANLALARO"],
+    "briefingLabel": "BAGO KA MAG-DEPLOY",
+    "briefingText": "Ubusin ang outbreak. Protektahan ang populasyon. Mahalaga ang bawat sibilyan.",
+    "earlyAccess": "EARLY ACCESS",
+    "earlyAccessText": "Patuloy na nagbabago ang labanan. Suriin ang petsa ng pagsusuri ng bawat gabay.",
+    "quickLinks": [
+      { "number": "01", "icon": "lucide:compass", "label": "Gabay sa baguhan", "detail": "Magsimula sa mahahalaga", "href": "/beginner-guide/" },
+      { "number": "02", "icon": "lucide:route", "label": "Evac corridor", "detail": "Gabayan ang sibilyan sa kaligtasan", "href": "/evac-corridor/" },
+      { "number": "03", "icon": "lucide:shield", "label": "Safe zones", "detail": "Magplano ng matibay na perimeter", "href": "/safe-zones/" },
+      { "number": "04", "icon": "lucide:crosshair", "label": "Paghahambing ng unit", "detail": "Ihambing ang bawat papel", "href": "/units-tier-list/" }
+    ],
+    "guidesEyebrow": "AKLATAN NG INTEL",
+    "guidesTitle": "Dito nagsisimula ang mas magandang plano.",
+    "allGuides": "Lahat ng gabay",
+    "featured": [
+      { "label": "MAGSIMULA RITO", "tone": "green", "title": "Ang una mong deployment", "description": "Basahin ang mapa, pumili ng posisyon, at maghanda para sa unang bugso ng impeksyon.", "href": "/beginner-guide/", "image": "/images/game/screenshot-2.webp", "alt": "Opisyal na gameplay na nagpapakita ng mapa ng lungsod at military deployment interface", "icon": "lucide:compass" },
+      { "label": "PRAYORIDAD SA SIBILYAN", "tone": "amber", "title": "Magtayo ng safe zone", "description": "Planuhin ang iyong perimeter, mga gate, at coverage bago magsimula ang outbreak.", "href": "/safe-zones/", "image": "/images/game/screenshot-4.webp", "alt": "Opisyal na gameplay na nagpapakita ng outbreak sa mga kalsada ng lungsod", "icon": "lucide:shield" },
+      { "label": "EVACUATION", "tone": "green", "title": "Gabayan ang sibilyan sa kaligtasan", "description": "Alamin kung paano nakakatulong ang corridors at hold areas sa planong paglikas.", "href": "/evac-corridor/", "image": "/images/game/screenshot-3.webp", "alt": "Opisyal na screenshot ng mga kanal at magkakadikit na gusali sa lungsod", "icon": "lucide:route" },
+      { "label": "CO-OP OPERATIONS", "tone": "green", "title": "Dalawang commander. Isang lungsod.", "description": "Magsama ng kaibigan at magkasundo sa plano bago magsimula ang outbreak.", "href": "/co-op/", "image": "/images/game/screenshot-5.webp", "alt": "Opisyal na screenshot ng Zombies Aren't Real na nagpapakita ng operasyong militar sa mapa ng lungsod", "icon": "lucide:users" },
+      { "label": "CASE STUDY NG KAMPANYA", "tone": "green", "title": "Boston: limang-antas na tala sa labanan", "description": "Tingnan kung paano inangkop ng isang manlalaro ang depensa sa buong kampanya sa Boston.", "href": "/maps/boston/", "image": "/images/game/screenshot-1.webp", "alt": "Opisyal na screenshot ng laro na nagpapakita ng lungsod habang may outbreak", "icon": "lucide:map-pin" },
+      { "label": "CASE STUDY NG KAMPANYA", "tone": "green", "title": "Miami: pagtatanggol sa mga tulay", "description": "Sundan ang depensa sa mga tulay, mga pagsubok, at mga pag-ulit ng isang manlalaro.", "href": "/maps/miami/", "image": "/images/game/screenshot-6.webp", "alt": "Opisyal na screenshot ng laro na nagpapakita ng urban defense", "icon": "lucide:map-pin" }
+    ],
+    "readGuide": "Basahin ang gabay",
+    "fieldNoteLabel": "TALA NG COMMANDER",
+    "fieldNoteTitle": "Ang iskor ay ang mga tao.",
+    "fieldNoteText": "Ang panalo ay pag-ubos sa bawat zombie. Ang iskor mo ay nakabatay sa mga sibilyang nailigtas mo. Planuhin ang pareho.",
+    "fieldNoteLink": "Briefing sa proteksyon ng sibilyan",
+    "dangerLabel": "COLLATERAL DAMAGE",
+    "dangerText": "Maaaring makapatay ng sibilyan ang air strikes. Suriin muna ang target na lugar bago tumawag ng suporta.",
+    "referenceLabel": "SANGGUNIAN NG PUWERSA",
+    "referenceTitle": "Alamin ang dine-deploy mo.",
+    "referenceLink": "Buksan ang sanggunian",
+    "forces": [
+      { "code": "LUPA / 01", "title": "Paghahambing ng Unit", "description": "Ihambing ang garrisons, mortars, snipers, at turrets ayon sa tungkulin.", "icon": "lucide:crosshair", "href": "/units-tier-list/" },
+      { "code": "HIMPAPAWID / 02", "title": "Air Support", "description": "Mga bomber at gun helicopter kapag bumigay ang linya.", "icon": "lucide:plane", "href": "/items/air-support/" },
+      { "code": "DEPENSA / 03", "title": "Mga Istrukturang Pandepensa", "description": "Safe zones, mga gate, at plano para sa populasyon.", "icon": "lucide:shield-check", "href": "/items/defenses/" }
+    ],
+    "intelLabel": "INTEL NG LARO",
+    "intelTitle": "Alamin ang operasyon.",
+    "facts": [
+      { "label": "DEVELOPER", "value": "Jogamedev" },
+      { "label": "PLATFORM", "value": "Windows / Steam" },
+      { "label": "MODE", "value": "Solo + 2-player co-op" },
+      { "label": "PAGLABAS", "value": "13 Nobyembre 2026" }
+    ],
+    "requirementsLabel": "Suriin ang system requirements",
+    "bottomLabel": "SUSUNOD MONG HAKBANG",
+    "bottomTitle": "Unahan sa pag-iisip ang outbreak.",
+    "bottomText": "Hindi kailangan ng lungsod ang perpektong commander. Kailangan nito ng mas magandang plano.",
+    "verified": "PAGSUSURI NG PINAGMULAN / 16 NOB 2026",
+    "imageCredit": "Mga larawan ng gameplay © Jogamedev / kani-kanilang may-ari ng karapatan.",
+    "footerLabel": "INDEPENDENT INTEL. MAGKASAMANG KALIGTASAN."
+  },
+  "footer": {
+    "playGame": "Laruin ang Zombies Aren't Real",
+    "officialDiscord": "Opisyal na Discord",
+    "officialYoutube": "Opisyal na YouTube",
+    "officialTwitter": "Opisyal na Twitter",
+    "officialReddit": "Opisyal na Reddit",
+    "about": "Tungkol sa Amin",
+    "faq": "FAQ",
+    "privacyPolicy": "Patakaran sa Privacy",
+    "termsOfService": "Mga Tuntunin ng Serbisyo",
+    "copyright": "Karapatang-ari",
+    "contact": "Makipag-ugnayan",
+    "copyrightText": "© 2026 Zombies Aren't Real Wiki. Nakalaan ang lahat ng karapatan.",
+    "community": "Komunidad",
+    "legal": "Legal"
+  }
+}

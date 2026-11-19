@@ -1,9 +1,10 @@
 ---
 import { Icon } from 'astro-icon/components';
 import { site } from '~/config/site';
-import { type Locale } from '~/i18n/routing';
+import { locales, LOCALE_LABELS, type Locale } from '~/i18n/routing';
 import { getUi } from '~/i18n/ui';
 import { homeUrl, localizePath } from '~/lib/url';
+import LanguageSwitcher from './LanguageSwitcher.astro';
 import ThemeToggle from './ThemeToggle.astro';
 import SearchButton from './SearchButton.astro';
 
@@ -12,35 +13,60 @@ interface Props {
   currentPath: string;
   availableLocales?: readonly Locale[];
 }
-const { locale, currentPath } = Astro.props;
+const { locale, currentPath, availableLocales } = Astro.props;
 const ui = getUi(locale);
 const command = ui.command;
+const homePath = homeUrl(locale);
 const desktopLinks = [
   { label: command.home, href: '/' },
   { label: ui.nav.guides, href: '/guides/' },
   { label: ui.nav.items, href: '/items/' },
   { label: command.navigation[4].label, href: command.navigation[4].href },
 ];
+const localePrefixRe = new RegExp(`^/(${locales.join('|')})(?=/|$)`);
+const rawPath = currentPath.replace(localePrefixRe, '') || '/';
+const pathFor = (targetLoc: Locale) =>
+  rawPath === '/' ? homeUrl(targetLoc) : localizePath(rawPath, targetLoc);
+const switchLocales = availableLocales ?? locales;
 ---
 
 <header class="command-header">
   <div class="header-main">
-    <a href={homeUrl(locale)} class="command-brand" aria-label={site.name}>
+    <a href={homePath} class="command-brand" aria-label={site.name}>
       <img src="/logo.svg" width="46" height="46" alt="" /><span><strong>{command.brandTop}</strong><small>{command.brandBottom}</small></span>
     </a>
     <nav class="header-navigation" aria-label={ui.shared.wikiNavAria}>
       {desktopLinks.map((item) => {
         const path = localizePath(item.href, locale);
-        const active = path === '/' ? currentPath === '/' : currentPath.startsWith(path);
+        const active = path === homePath ? currentPath === homePath : currentPath.startsWith(path);
         return <a href={path} class:list={[active && 'is-active']} aria-current={active ? 'page' : undefined}>{item.label}</a>;
       })}
     </nav>
     <div class="header-actions">
       <SearchButton locale={locale} /><ThemeToggle />
+      {switchLocales.length > 1 && (
+        <div class="header-lang-desktop">
+          <LanguageSwitcher locale={locale} pathFor={pathFor} availableLocales={switchLocales} />
+        </div>
+      )}
       <a href={site.social.official} class="steam-button" target="_blank" rel="noopener noreferrer"><Icon name="lucide:external-link" /><span>{command.steamLabel}</span></a>
       <details class="command-mobile-menu">
         <summary aria-label={ui.nav.menu}><Icon name="lucide:menu" /></summary>
-        <nav aria-label={ui.nav.menu}>{command.navigation.map((item) => <a href={localizePath(item.href, locale)}><Icon name={item.icon} />{item.label}</a>)}</nav>
+        <nav aria-label={ui.nav.menu}>
+          {command.navigation.map((item) => <a href={localizePath(item.href, locale)}><Icon name={item.icon} />{item.label}</a>)}
+          {switchLocales.length > 1 && (
+            <div class="mobile-lang-switcher" role="group" aria-label={ui.nav.language}>
+              <span class="micro mobile-lang-label"><Icon name="lucide:globe" />{ui.nav.language}</span>
+              <div class="mobile-lang-links">
+                {switchLocales.map((loc) => (
+                  <a href={pathFor(loc)} class:list={[loc === locale && 'is-active']} aria-current={loc === locale ? 'page' : undefined}>
+                    {LOCALE_LABELS[loc]}
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+        </nav>
       </details>
     </div>
   </div>

@@ -103,6 +103,8 @@ export const KNOWN_LOCALE_LABELS: Record<string, string> = {
   vi: 'Tiếng Việt',
   tr: 'Türkçe',
   pl: 'Polski',
+  tl: 'Filipino',
+  fil: 'Filipino',
 };
 
 /**

@@ -338,8 +338,13 @@ export default defineConfig({
       // demo.astro and gets collected automatically.
       filter: (url) => {
         const pagePath = normalizePath(decodeSitemapPath(url));
-        // Tag directories are navigation aids, not search landing pages.
-        const isTagPath = pagePath === '/tags' || pagePath.startsWith('/tags/');
+        // Tag directories are navigation aids, not search landing pages
+        // (both default `/tags/...` and localized `/<locale>/tags/...` render noindex).
+        const strippedTagPath = pagePath.replace(
+          new RegExp(`^/(?:${locales.join('|')})(?=/|$)`),
+          '',
+        );
+        const isTagPath = strippedTagPath === '/tags' || strippedTagPath.startsWith('/tags/');
         return (
           !isTagPath &&
           !noindexPaths.has(pagePath) &&

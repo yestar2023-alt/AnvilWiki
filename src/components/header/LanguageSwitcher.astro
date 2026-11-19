@@ -22,13 +22,13 @@ const { locale, pathFor, availableLocales } = Astro.props;
 const switchLocales = availableLocales ?? locales;
 ---
 
-<details class="relative">
+<details class="language-switcher relative">
   <summary
-    class="inline-flex cursor-pointer list-none items-center gap-1 rounded-md px-3 py-1.5 text-sm font-medium text-foreground transition hover:bg-muted"
+    class="inline-flex cursor-pointer list-none items-center gap-1.5 rounded-sm border border-border px-2.5 py-2 text-xs font-semibold text-foreground transition hover:border-nav hover:bg-muted"
   >
-    <Icon name="lucide:globe" class="h-4 w-4" />
+    <Icon name="lucide:globe" class="h-3.5 w-3.5 text-nav" />
     <span>{LOCALE_LABELS[locale]}</span>
-    <Icon name="lucide:chevron-down" class="h-3 w-3" />
+    <Icon name="lucide:chevron-down" class="h-3 w-3 opacity-70" />
   </summary>
   <div class="absolute right-0 z-50 mt-2 w-40 overflow-hidden rounded-md border bg-card shadow-lg">
     {

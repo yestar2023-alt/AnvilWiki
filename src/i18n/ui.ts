@@ -10,11 +10,13 @@
  */
 
 import en from '~/locales/en.json';
+import tl from '~/locales/tl.json';
 
 import { defaultLocale, isLocale, type Locale } from './routing';
 
 const messages: Record<Locale, Record<string, unknown>> = {
   en: en as Record<string, unknown>,
+  tl: tl as Record<string, unknown>,
 };
 
 /**
