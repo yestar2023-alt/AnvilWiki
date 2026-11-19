@@ -32,6 +32,7 @@ const show = !!import.meta.env.PUBLIC_ADSTERRA_SLOT_STICKY_320X50;
 // Same env condition under which BaseLayout renders CookieConsent — when
 // either is set the consent promise is live and the anchor must wait for it.
 const consentBannerActive = !!(
+  (import.meta.env.PUBLIC_GTM_ID as string | undefined) ||
   (import.meta.env.PUBLIC_GA_ID as string | undefined) ||
   (import.meta.env.PUBLIC_ADSENSE_CLIENT as string | undefined)
 );

@@ -22,8 +22,9 @@
  * the iframe 404s as an empty box.
  *
  * Consent-gated like GA/AdSense: when the cookie banner is active (its own
- * render condition in BaseLayout = PUBLIC_GA_ID or PUBLIC_ADSENSE_CLIENT
- * set), the iframe mounts WITHOUT src (data-src holds the real URL) and a
+ * render condition in BaseLayout = PUBLIC_GTM_ID, PUBLIC_GA_ID or
+ * PUBLIC_ADSENSE_CLIENT set), the iframe mounts WITHOUT src (data-src holds
+ * the real URL) and a
  * small ES2018 inline script promotes data-src → src only after the visitor
  * has consented — either a stored 'accepted' in CookieConsent's localStorage
  * flag, or the `aw:consent-accepted` event it dispatches on accept. Declined
@@ -57,6 +58,7 @@ const show = !!import.meta.env[envKey];
 // Same env condition under which BaseLayout renders CookieConsent — when
 // either is set the banner (and its consent promise) is live on every page.
 const consentBannerActive = !!(
+  (import.meta.env.PUBLIC_GTM_ID as string | undefined) ||
   (import.meta.env.PUBLIC_GA_ID as string | undefined) ||
   (import.meta.env.PUBLIC_ADSENSE_CLIENT as string | undefined)
 );
